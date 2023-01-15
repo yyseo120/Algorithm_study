@@ -1,0 +1,8 @@
+def solution(s):
+    n = int(len(s)/2)
+    if len(s) % 2 == 0:
+        a = s[n-1] + s[n]
+    else:
+        a = s[n]
+    answer = a
+    return answer
