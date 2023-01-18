@@ -1,0 +1,10 @@
+def solution(n, m):
+    a=[]
+    b=1
+    for i in range(1,min(m,n)+1):
+        if (m%i==0) & (n%i==0):
+            a.append(i)
+        if max(a)==1:
+            b=n*m
+        elif max(a)==min(n,m):
+            b=max(m,n)
