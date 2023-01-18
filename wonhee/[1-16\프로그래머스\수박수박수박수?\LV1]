@@ -1,0 +1,7 @@
+def solution(n):
+    a = '수박'
+    if n%2 == 1:
+        result  = a*(n//2) + a[0]
+    else:
+        result = a*(n//2)
+    return result

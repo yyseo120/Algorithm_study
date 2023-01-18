@@ -1,7 +1,7 @@
 def solution(arr):
     answer = 0
 
-    for i in range(len(arr)):
+    for i in arr:
         answer += i / len(arr)
         
     return answer
@@ -9,7 +9,7 @@ def solution(arr):
 solution([1, 2, 3, 4])
 
 
-# 엄청난 1줄코드.. ㄷㄷㄷ
+# sum을 이용한 풀이
 def solution(arr):
     answer = sum(arr) / len(arr)
 
