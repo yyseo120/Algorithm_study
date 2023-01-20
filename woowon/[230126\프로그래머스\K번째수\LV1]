@@ -10,3 +10,9 @@ def solution(array, commands):
     for c, d, e in zip(i, j, k):
         s.append(sorted(array[c-1:d])[e-1])
     return s
+=================================================
+def solution(array, commands):
+    l = []
+    for i, j, k in commands:
+        l.append(sorted(array[i-1:j])[k-1])
+    return l
