@@ -1,3 +1,6 @@
 def solution(arr, divisor):
     l = sorted([i for i in arr if i % divisor == 0])
     return [-1] if l == [] else l
+======================================================
+def solution(arr, divisor):
+    return [-1] if sorted([i for i in arr if i % divisor == 0]) == [] else sorted([i for i in arr if i % divisor == 0])
