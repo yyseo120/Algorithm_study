@@ -4,3 +4,6 @@ def solution(phone_number):
         l[i] = '*'
     phone_number = ''.join(l)
     return phone_number
+===========================================================
+def solution(phone_number):
+    return (''.join(['*' for i in range(-5, -len(phone_number)-1, -1)]+[phone_number[-4:]]))
