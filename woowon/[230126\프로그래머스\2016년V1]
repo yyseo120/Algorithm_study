@@ -1,0 +1,18 @@
+def solution(a, b):
+    days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    for i in range(a-1):
+        b += days[i]
+    if b % 7 == 0:
+        return 'THU'
+    elif b % 7 == 1:
+        return 'FRI'
+    elif b % 7 == 2:
+        return 'SAT'
+    elif b % 7 == 3:
+        return 'SUN'
+    elif b % 7 == 4:
+        return 'MON'
+    elif b % 7 == 5:
+        return 'TUE'
+    elif b % 7 == 6:
+        return 'WED'
