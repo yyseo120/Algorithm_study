@@ -1,0 +1,50 @@
+def solution(n, arr1, arr2):
+    a = []
+    b = []
+    c = []
+    d = []
+    e = []
+
+    for i in arr1:
+        a.append(format(i, 'b').zfill(n))
+    for j in arr2:
+        b.append(format(j, 'b').zfill(n))
+    
+    for k in range(n):
+        c.append(list(str(a[k])))
+        d.append(list(str(b[k])))
+    
+    for l in range(n):
+        for m in range(n):
+            if c[l][m] == '1':
+                c[l][m] = '#'
+            elif c[l][m] == '0':
+                c[l][m] = ' '
+
+    for l in range(n):
+        for m in range(n):            
+            if d[l][m] == '1':
+                d[l][m] = '#'
+            elif d[l][m] == '0':
+                d[l][m] = ' '
+
+    for l in range(n):
+        for m in range(n):            
+            if c[l][m] == '#' or d[l][m] == '#':
+                c[l][m] = '#'
+            else:
+                c[l][m] = ' '
+
+    for p in range(n):
+        e.append(''.join(c[p]))
+    return e
+=======================================================
+def solution(n, arr1, arr2):
+    answer = []
+    for i,j in zip(arr1,arr2):
+        a12 = str(bin(i|j)[2:])
+        a12=a12.rjust(n,'0')
+        a12=a12.replace('1','#')
+        a12=a12.replace('0',' ')
+        answer.append(a12)
+    return answer

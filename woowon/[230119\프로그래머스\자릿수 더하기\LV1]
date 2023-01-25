@@ -1,0 +1,10 @@
+def solution(n):
+    n = str(n)
+    s= 0
+    d = []
+    for i in n:
+        d.append(i)
+    for j in d:
+        m = int(j)
+        s += m
+    return s

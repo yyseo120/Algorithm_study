@@ -1,0 +1,11 @@
+  def solution(x, n):
+    x = int(x)
+    n = int(n) 
+    x_1st = x
+    answer=[]
+    while True:
+        answer.append(x)
+        x = x + x_1st
+        if len(answer) == n:
+            break
+    return(answer)

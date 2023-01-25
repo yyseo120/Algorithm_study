@@ -1,0 +1,9 @@
+def solution(arr1, arr2):
+    d = []
+    for i in range(len(arr1)):
+        dd = []
+        for j in range(len(arr1[i])):
+            dd.append(arr1[i][j] + arr2[i][j])
+        d.append(dd)
+
+    return d

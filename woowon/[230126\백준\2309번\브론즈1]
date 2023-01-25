@@ -1,0 +1,19 @@
+nums = []
+answer = []
+for i in range(9):
+    nums.append(int(input()))
+
+for i in range(8):
+    for j in range(i+1, 9):
+        b = nums.pop(j)
+        a = nums.pop(i)
+        if sum(nums) == 100:
+            answer = sorted(nums)
+            nums.insert(i, a)
+            nums.insert(j, b)
+        else:
+            nums.insert(i, a)
+            nums.insert(j, b)
+
+for k in answer:
+    print(k)
