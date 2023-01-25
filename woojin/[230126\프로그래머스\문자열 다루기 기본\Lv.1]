@@ -1,2 +1,8 @@
 def solution(s):
     return (len(s) in [4, 6]) and (s.upper() == s.lower())
+
+"""
+두 가지 조건을 체크하여 boolean (True / False)으로 반환한다.
+    1. s의 길이가 4 또는 6인가?
+    2. 숫자로만 구성되어 있는가? => 문자인 경우 upper()과 lower()의 값이 다를 것
+"""
