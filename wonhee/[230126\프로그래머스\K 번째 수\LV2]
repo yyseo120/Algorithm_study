@@ -1,0 +1,8 @@
+def solution(a, c):
+    answer = []
+    x = []
+    for i in range(len(c)):
+        x.append(a[c[i][0]-1:c[i][1]])
+        b = sorted(x[i])
+        answer.append(sum(b[c[i][-1]-1:c[i][-1]]))
+    return answer
