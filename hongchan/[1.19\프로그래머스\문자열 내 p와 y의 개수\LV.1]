@@ -1,0 +1,16 @@
+def solution(s):
+    answer = True
+    str_p = 0
+    str_y = 0
+    for i in s:
+        if i == 'P' or i == 'p':
+            str_p += 1
+        elif i =='Y' or i =='y':
+            str_y += 1
+    if str_p != str_y:
+        return False
+    
+   
+
+
+    return True

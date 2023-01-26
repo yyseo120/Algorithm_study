@@ -1,0 +1,7 @@
+def solution(phone_number):
+    return "*" * (len(phone_number) - 4) + phone_number[-4:]
+    
+"""
+phone_number의 앞쪽은 그 개수를 알아낸 뒤 전부 *로 처리하고,
+마지막 4자리만 슬라이싱하여 원래의 문자열로 넣었다.
+"""

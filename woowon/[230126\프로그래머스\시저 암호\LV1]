@@ -1,0 +1,16 @@
+def solution(s, n):
+    l = []
+    k = []
+    for i in s:
+        l.append(ord(i))
+    for j in l:
+        if j+n > 90 and j <= 90:
+            k.append(chr(j+n-26))
+        elif j+n > 122 and j >= 97:
+            k.append(chr(j+n-26))
+        elif j == 32:
+            k.append(chr(j))
+        else:
+            k.append(chr(j+n))
+        
+    return ''.join(k)
