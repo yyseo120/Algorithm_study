@@ -1,0 +1,6 @@
+def solution(a, c): #2차원배열 리스트 안에 리스트형태, 리스트 길이는 1~50까지임.
+    lst = []
+    for x in c: #리스트에서 2차원배열을 꺼냄
+        num = sorted(a[x[0]-1:x[1]])[x[2]-1]
+        lst.append(num)
+    return(lst)
