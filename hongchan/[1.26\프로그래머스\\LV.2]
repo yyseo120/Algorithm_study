@@ -1,0 +1,18 @@
+from datetime import date
+     
+    
+def solution(a,b):
+    d = ['MON','TUE','WED','THU','FRI','SAT','SUN']
+    a = date(2016, a,b).weekday()
+    return d[a]
+
+
+
+
+# 2016년 1월 1일은 금요일이다.
+# 2016년 a월 b일은 무슨 요일일까?(*)
+  # 월과 일을 입력받는다.
+  # 일요일부터 토요일 까지(0~6)
+  # 시작은 금요일
+  # 윤년 
+    # if ((year%4==0)and(year%100==0)or year$400==0)
