@@ -1,0 +1,8 @@
+# n의 값을 문자열로 바꾼 뒤, sorted(reverse) 함수를 사용해 내림차순 정렬한다. 
+# 이후 '' 문자열(빈 문자열)을 기준으로 join 하여 list 형태를 문자열로 만들고
+# 이를 int형으로 형변환한다.
+
+def solution(n):
+
+    return int(''.join(sorted(str(n), reverse=True)))
+solution(118372)
