@@ -1,0 +1,18 @@
+def solution(s):
+    return(s.isdecimal() and ((len(s) == 4) or (len(s) == 6)))  
+        
+#문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수반환하기
+#1. 길이가 4 또는 6인걸 확인하는 것은 or이기 때문에 숫자로만 구성되어있는 조건은 필수라 and 앞에 둠.
+#2. 문자열 s를 int형으로 변환할 수 있으면 True를 반환하는 함수 isdecimal()을 사용.
+함께 알아두면 좋을 숫자확인 함수는 isdecimal(),isdisit(),isnumeric()이 있음.
+범위는 순서대로 더 많은 숫자형태를 포함, 가장 넓은 것은 isnumeric()
+=================================================================================================        
+함께 알아두면 좋을 풀이
+ - <try except>를 활용한 풀이
+
+def alpha_string46(s):
+    try:
+        int(s) #int(s)를 하면 문자가 포함될 경우 Exception이 발생. 
+    except:
+        return False #예외를 발생시킬 경우 False를 반환한다.
+    return len(s) == 4 or len(s) == 6  #s문자열이 숫자임을 통과하고 문자열의 길이를 boolean으로 확인해서 반환시킨다.
