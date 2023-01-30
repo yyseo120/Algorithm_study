@@ -1,0 +1,19 @@
+def solution(s, n):
+    answer = []
+    for t in s:
+        if t == ' ': #공백이면
+            answer.append(' ')
+        else:
+            tt = ord(t)
+            if tt < ord('a'): #대문자면
+                if tt + n <= ord('Z'): #A~Z 범위 안에서 놀면
+                    answer.append(chr(tt + n)) #그냥 ㄱㄱ
+                else: #범위 벗어나면
+                    answer.append(chr(tt + n - 26)) #돌아와
+            else: #소문자면
+                if tt + n <= ord('z'): #a~z 범위 안에서 놀면
+                    answer.append(chr(tt + n)) #그냥 ㄱㄱ
+                else: #범위 벗어나면
+                    answer.append(chr(tt + n - 26)) #돌아와
+
+    return "".join(answer)
