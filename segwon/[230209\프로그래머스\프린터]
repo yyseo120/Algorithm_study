@@ -1,0 +1,17 @@
+from collections import deque
+def solution(priorities, location):
+    answer = 1
+    d = deque(priorities)
+    j = deque(list(range(len(priorities))))
+
+    while True:
+        if d[0] == max(d) and j[0] == location:
+            break
+        elif d[0] == max(d):
+            d.popleft()
+            j.popleft()
+            answer += 1
+        else:
+            d.rotate(-1)
+            j.rotate(-1)
+    return answer
