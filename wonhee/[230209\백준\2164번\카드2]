@@ -1,0 +1,14 @@
+from collections import deque
+
+q= deque()
+a = int(input())
+if 1<= a and a <= 500000:
+    for i in range(1, a+1):
+        q.append(i)
+    
+    for i in range(len(q)):
+        if len(q)==1:
+            print(q[0])
+            break
+        q.popleft()
+        q.rotate(-1)
