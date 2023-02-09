@@ -1,0 +1,16 @@
+from collections import deque
+def solution(priorities, location):
+    pppp = [(value,index) for index, value in enumerate(priorities)]
+    cnt = 0
+    q= deque(pppp)
+    p = sorted(priorities)
+    while len(q) != 0:
+        if q[0][0] == p[-1] :
+            a = q.popleft()
+            p.pop()
+            cnt += 1
+            if a[1] == location:
+                break
+        else:
+            q.rotate(-1)
+    return cnt
