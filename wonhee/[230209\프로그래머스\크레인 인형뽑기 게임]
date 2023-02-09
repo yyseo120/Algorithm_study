@@ -1,0 +1,21 @@
+import numpy as np
+
+def solution(board, moves):
+    a = []
+    cnt = 0
+    b = np.array(board).T
+    c=b.tolist()
+    
+    for i in moves:
+        for j in c[i-1]:
+            if j != 0:   
+                a.append(j)
+                c[i-1][c[i-1].index(j)]=0
+                break
+        if len(a)>=2:
+            if a[-2]==a[-1]:
+                a.pop()
+                a.pop()
+                cnt +=2
+            
+    return cnt
