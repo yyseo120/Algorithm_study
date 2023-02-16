@@ -1,0 +1,36 @@
+import itertools
+a = int(input())
+b = list(map(int,input().split(' ')))
+c = list(map(int,input().split(' ')))
+
+
+c[0] = '+'*c[0]
+c[1] = '-'*c[1]
+c[2] = '*'*c[2]
+c[3] = '/'*c[3]
+d = list(''.join(c))
+
+per = list(itertools.permutations(d, len(d)))
+l = list(set(per))
+result=[]
+
+
+for i in range(len(l)):
+    x = b[0]
+    for j in range(len(d)):
+        if l[i][j] == '+':
+            x += b[j+1]   
+        elif l[i][j] == '-':
+            x -= b[j+1]
+        elif l[i][j] == '*':
+            x *= b[j+1]
+        elif l[i][j] == '/':
+            if x<0:
+                x = -(-x//b[j+1])
+            else:
+                x //= b[j+1]
+
+    result.append(x)
+    
+print(max(result))
+print(min(result))
