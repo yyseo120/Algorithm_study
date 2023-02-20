@@ -1,0 +1,21 @@
+def solution(priorities, location):
+    answer = 0
+    cnt = 0
+
+    q = [(i, v) for i, v in enumerate(priorities)]
+    max_num = max(priorities)
+
+    while True:
+        for i, v in q:
+            if v == max_num:
+                priorities[i] = 0
+                answer += 1
+                max_num = max(priorities)
+                if i == location:
+                    if priorities[i] == 0:
+                        cnt += 1
+                        break
+        if cnt == 1:
+            break
+
+    return answer
