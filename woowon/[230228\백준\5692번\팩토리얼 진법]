@@ -1,0 +1,24 @@
+temp = [1]
+l = []
+
+while temp.pop() != '0':
+    temp.append(input())
+    if temp[0] != '0':
+        l.append(temp[0])
+
+import math
+s = 0
+
+for i in l:
+    try:
+        s += int(i[0])*(math.factorial(len(i)))
+        s += int(i[1])*(math.factorial(len(i)-1))
+        s += int(i[2])*(math.factorial(len(i)-2))
+        s += int(i[3])*(math.factorial(len(i)-3))
+        s += int(i[4])*(math.factorial(len(i)-4))
+        print(s)
+        s = 0
+    except:
+        print(s)
+        s = 0
+        pass
