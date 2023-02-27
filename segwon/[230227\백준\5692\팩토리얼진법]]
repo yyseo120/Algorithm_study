@@ -1,0 +1,16 @@
+l = []
+while True:
+    n = input()
+    if n == '0':
+        break
+    l.append(n)
+for i in l:
+    cnt=0
+    p = len(i)
+    for j in range(p):
+        a = 1
+        for k in range(p, 0, -1):
+            a*=k
+        cnt+=int(i[j])*a
+        p-=1
+    print(cnt)
