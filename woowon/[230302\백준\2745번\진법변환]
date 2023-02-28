@@ -1,0 +1,13 @@
+n, b = input().split()
+s = len(n)-1
+answer = 0
+
+for i in n:
+    if i.isdecimal() == True:
+        answer += int(i) * (int(b)**s)
+        s -= 1
+    else:
+        answer += (ord(i)-55) * (int(b)**s)
+        s -= 1
+
+print(answer)
