@@ -1,0 +1,14 @@
+from collections import deque
+def solution(n, arr1, arr2):
+
+    answer = deque([])
+    for i in range(n):
+        answer.append(bin(arr1[i]|arr2[i]))
+    for _ in range(len(answer)):
+        b = answer.popleft()[2:]
+        if len(b)<n:
+            b = '0'*(n-len(b))+b
+        b = b.replace('0', ' ')
+        b = b.replace('1', '#')
+        answer.append(b)
+    return list(answer)
