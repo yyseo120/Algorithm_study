@@ -1,0 +1,7 @@
+B, N = input().split(" ")
+num = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+cnt = 0
+
+for i in range(len(B)-1, -1, -1):
+    cnt += num.index(B[::-1][i])*int(N)**i
+print(cnt)
