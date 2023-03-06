@@ -1,0 +1,19 @@
+def solution(record):
+    hash = dict()
+    answer=[]
+    for i in record:
+        a=i.split(" ")
+        if a[0]=="Enter":
+            hash[a[1]] = a[2]
+        elif a[0]=="Change":
+            hash[a[1]] = a[2]
+    for j in record:
+        b = j.split(" ")
+        if b[0] == "Enter":
+            c = f"{hash[b[1]]}님이 들어왔습니다."
+            answer.append(c)
+        b = j.split(" ")
+        if b[0]== "Leave":
+            c = f"{hash[b[1]]}님이 나갔습니다."
+            answer.append(c)
+    return answer
