@@ -1,0 +1,7 @@
+H=0
+L = int(input())
+str = list(input())
+for i in range(L):
+    H+=(ord(str[i])-96)*31**i
+H=H%1234567891
+print(H)
