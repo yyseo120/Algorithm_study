@@ -1,0 +1,9 @@
+l = int(input())
+s = input()
+
+answer = 0
+
+for i, v in enumerate(s):
+    answer += ((ord(v) - 96)*(31**i))
+
+print(answer%1234567891)
