@@ -1,0 +1,11 @@
+def solution(participant, completion):
+    p = sorted(participant)
+    c = sorted(completion)
+    i=0
+    while i < len(c):
+        if p[i] == c[i]:
+            pass
+        else:
+            break
+        i += 1
+    return p[i]
