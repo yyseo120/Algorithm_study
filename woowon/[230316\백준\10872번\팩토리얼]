@@ -1,0 +1,13 @@
+N = int(input())
+answer = 1
+
+def fatorial(n):
+    global answer
+    if n == 0 or n == 1:
+        return 1
+    else:
+        answer = answer * n
+        fatorial(n-1)
+
+fatorial(N)
+print(answer)
