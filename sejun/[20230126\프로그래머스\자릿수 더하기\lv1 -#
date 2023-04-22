@@ -1,6 +1,0 @@
-def solution(N):
-    nums = str(N)
-    lst = []
-    for i in nums[:len(nums)]: 
-        lst.append(int(i))
-    return sum(lst)

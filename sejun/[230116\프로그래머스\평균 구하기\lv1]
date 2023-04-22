@@ -1,4 +1,0 @@
-def solution(lst):
-    for a in lst:
-        b = sum(lst) / len(lst)
-    return(b)
