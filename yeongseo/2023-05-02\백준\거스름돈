@@ -1,0 +1,33 @@
+money = int(input())
+cha = 1000-money
+if cha//500:
+    a = cha//500
+    cha = cha - a*500
+else:
+    a=0
+if cha//100:
+    b = cha//100
+    cha = cha - b*100
+else:
+    b=0
+if cha//50:
+    c = cha//50
+    cha = cha - c*50
+else:
+    c=0
+if cha//10:
+    d = cha//10
+    cha = cha - d*10
+else:
+    d=0
+if cha//5:
+    e = cha//5
+    cha = cha -e * 5
+else:
+    e=0
+if cha//1:
+    f = cha//1
+else:
+    f=0
+sum = a+ b+c+d+e+f
+print(sum)
